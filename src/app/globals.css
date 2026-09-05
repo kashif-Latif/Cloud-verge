@@ -1,0 +1,435 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/*  CLOUDVERGE DESIGN SYSTEM — "Auralis" language                      */
+/*  Light-first, glass + mirror, aurora gradient accents               */
+/* ------------------------------------------------------------------ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 12px);
+  --radius-3xl: calc(var(--radius) + 16px);
+
+  /* CloudVerge / Auralis brand tokens */
+  --color-cv-ink: var(--cv-ink);
+  --color-cv-muted: var(--cv-muted);
+  --color-cv-panel: var(--cv-panel);
+  --color-cv-card: var(--cv-card);
+  --color-cv-line: var(--cv-line);
+  --color-cv-tint-violet: var(--cv-tint-violet);
+  --color-cv-tint-mint: var(--cv-tint-mint);
+  --color-cv-tint-sky: var(--cv-tint-sky);
+  --color-cv-tint-peach: var(--cv-tint-peach);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Auralis light canvas */
+  --background: #f7f7f5;
+  --foreground: #111111;
+  --card: #fcfcfb;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f2ef;
+  --secondary-foreground: #111111;
+  --muted: #f3f2ef;
+  --muted-foreground: #6b6b6b;
+  --accent: #edece8;
+  --accent-foreground: #111111;
+  --destructive: #dc2626;
+  --border: #e7e7e4;
+  --input: #e7e7e4;
+  --ring: #111111;
+  --chart-1: #818cf8;
+  --chart-2: #34d399;
+  --chart-3: #fbbf24;
+  --chart-4: #60a5fa;
+  --chart-5: #f472b6;
+  --sidebar: #fcfcfb;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #111111;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f3f2ef;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #e7e7e4;
+  --sidebar-ring: #111111;
+
+  --cv-ink: #111111;
+  --cv-muted: #6b6b6b;
+  --cv-panel: #f3f2ef;
+  --cv-card: #fcfcfb;
+  --cv-line: #e7e7e4;
+  --cv-tint-violet: #eeeafb;
+  --cv-tint-mint: #e4f6ee;
+  --cv-tint-sky: #e6f2fb;
+  --cv-tint-peach: #fdeee4;
+
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-shadow: 0 8px 32px rgba(17, 17, 17, 0.08);
+}
+
+.dark {
+  --background: #0d0d0c;
+  --foreground: #f5f5f3;
+  --card: #151514;
+  --card-foreground: #f5f5f3;
+  --popover: #191918;
+  --popover-foreground: #f5f5f3;
+  --primary: #f5f5f3;
+  --primary-foreground: #111111;
+  --secondary: #1c1c1b;
+  --secondary-foreground: #f5f5f3;
+  --muted: #1c1c1b;
+  --muted-foreground: #9c9c98;
+  --accent: #232322;
+  --accent-foreground: #f5f5f3;
+  --destructive: #f87171;
+  --border: #262625;
+  --input: #262625;
+  --ring: #d4d4d0;
+  --sidebar: #151514;
+  --sidebar-foreground: #f5f5f3;
+  --sidebar-primary: #f5f5f3;
+  --sidebar-primary-foreground: #111111;
+  --sidebar-accent: #1c1c1b;
+  --sidebar-accent-foreground: #f5f5f3;
+  --sidebar-border: #262625;
+  --sidebar-ring: #d4d4d0;
+
+  --cv-ink: #f5f5f3;
+  --cv-muted: #9c9c98;
+  --cv-panel: #161615;
+  --cv-card: #151514;
+  --cv-line: #262625;
+  --cv-tint-violet: #1d1a2c;
+  --cv-tint-mint: #12211b;
+  --cv-tint-sky: #121c26;
+  --cv-tint-peach: #271b13;
+
+  --glass-bg: rgba(21, 21, 20, 0.5);
+  --glass-bg-strong: rgba(21, 21, 20, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #111111;
+    color: #ffffff;
+  }
+  .dark ::selection {
+    background: #f5f5f3;
+    color: #111111;
+  }
+}
+
+@layer components {
+  /* ---------- layout rhythm ---------- */
+  .container-cv {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8;
+  }
+  .section-cv {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  /* ---------- typography ---------- */
+  .text-display {
+    font-size: clamp(2.75rem, 6.5vw, 5.25rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+  }
+  .text-h2 {
+    font-size: clamp(2.1rem, 4.5vw, 3.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+  .text-h3 {
+    font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .text-lead {
+    font-size: clamp(1.02rem, 1.4vw, 1.125rem);
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: var(--cv-muted);
+  }
+
+  /* ---------- pills & chips ---------- */
+  .btn-pill {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 select-none cursor-pointer;
+  }
+  .btn-ink {
+    background: var(--cv-ink);
+    color: var(--background);
+  }
+  .btn-ink:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+  .btn-ink:active {
+    transform: translateY(0) scale(0.98);
+  }
+  .btn-ghost-pill {
+    border: 1px solid var(--cv-line);
+    color: var(--cv-ink);
+    background: transparent;
+  }
+  .btn-ghost-pill:hover {
+    background: var(--cv-panel);
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium;
+    border-color: var(--cv-line);
+    background: var(--cv-card);
+    color: var(--cv-muted);
+  }
+
+  /* ---------- glass & mirror ---------- */
+  .glass {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    backdrop-filter: blur(18px) saturate(1.4);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  .glass-strong {
+    background: var(--glass-bg-strong);
+    -webkit-backdrop-filter: blur(24px) saturate(1.5);
+    backdrop-filter: blur(24px) saturate(1.5);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  /* light-catch sheen across the top edge of glass, like light on a mirror */
+  .mirror-sheen {
+    position: relative;
+  }
+  .mirror-sheen::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      transparent 5%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 95%
+    );
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  .dark .mirror-sheen::before {
+    background: linear-gradient(
+      90deg,
+      transparent 5%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 95%
+    );
+  }
+  /* diagonal moving reflection on hover — glass tilted in light */
+  .mirror-glint {
+    position: relative;
+    overflow: hidden;
+  }
+  .mirror-glint::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -80%;
+    width: 55%;
+    height: 220%;
+    transform: rotate(22deg) translateX(0);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.32),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.9s ease;
+    pointer-events: none;
+  }
+  .mirror-glint:hover::after {
+    opacity: 1;
+    transform: rotate(22deg) translateX(320%);
+  }
+  .dark .mirror-glint::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+  }
+
+  /* ---------- aurora orbs ---------- */
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(64px);
+    pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  .orb-violet {
+    background: linear-gradient(45deg, #a5b4fc, #c084fc);
+  }
+  .orb-sky {
+    background: linear-gradient(45deg, #7dd3fc, #60a5fa);
+  }
+  .orb-rose {
+    background: linear-gradient(45deg, #fda4af, #fdba74);
+  }
+  .orb-mint {
+    background: linear-gradient(45deg, #6ee7b7, #99f6e4);
+  }
+  @keyframes orb-drift-a {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(28px, -18px) scale(1.06); }
+  }
+  @keyframes orb-drift-b {
+    0%, 100% { transform: translate(0, 0) scale(1.04); }
+    50% { transform: translate(-24px, 20px) scale(0.98); }
+  }
+  .orb-anim-a { animation: orb-drift-a 14s ease-in-out infinite; }
+  .orb-anim-b { animation: orb-drift-b 18s ease-in-out infinite; }
+
+  /* the literal mirror: a reflected copy fading into the floor */
+  .reflect-floor {
+    transform: scaleY(-1);
+    -webkit-mask-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.28),
+      transparent 62%
+    );
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.28), transparent 62%);
+    opacity: 0.7;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* ---------- logo marquee ---------- */
+  @keyframes marquee-x {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-x 38s linear infinite;
+  }
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* ---------- one orchestrated entrance (hero only) ---------- */
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .rise-1, .rise-2, .rise-3, .rise-4 {
+    opacity: 0;
+    animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .rise-1 { animation-delay: 0.05s; }
+  .rise-2 { animation-delay: 0.16s; }
+  .rise-3 { animation-delay: 0.27s; }
+  .rise-4 { animation-delay: 0.4s; }
+
+  /* ---------- tint cards ---------- */
+  .tint-violet { background: var(--cv-tint-violet); }
+  .tint-mint { background: var(--cv-tint-mint); }
+  .tint-sky { background: var(--cv-tint-sky); }
+  .tint-peach { background: var(--cv-tint-peach); }
+
+  .card-cv {
+    background: var(--cv-card);
+    border: 1px solid var(--cv-line);
+    border-radius: calc(var(--radius) + 8px);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* accessibility: kill decorative motion for users who ask */
+@media (prefers-reduced-motion: reduce) {
+  .orb-anim-a,
+  .orb-anim-b,
+  .marquee-track,
+  .rise-1, .rise-2, .rise-3, .rise-4 {
+    animation: none !important;
+  }
+  .rise-1, .rise-2, .rise-3, .rise-4 { opacity: 1; }
+  html { scroll-behavior: auto; }
+}
