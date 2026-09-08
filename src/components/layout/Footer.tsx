@@ -50,10 +50,19 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col gap-5">
             <button
               onClick={() => navigate('home')}
-              className="w-fit text-[20px] font-semibold tracking-tight text-cv-ink"
+              className="flex w-fit items-center gap-2.5 text-cv-ink"
             >
-              {site.name}
+              <img src="/brand/logo-mark.png" alt="" className="h-9 w-9 rounded-full" width={36} height={36} />
+              <span className="text-[20px] font-semibold tracking-tight">{site.name}</span>
             </button>
+            <div className="mirror-sheen w-fit overflow-hidden rounded-2xl bg-[#1c2530] p-4 pr-6">
+              <img
+                src="/brand/logo-full.jpg"
+                alt="CloudVerge — Elevating technology. Empowering futures."
+                className="h-24 w-auto object-contain"
+              />
+            </div>
+            <p className="text-xs font-medium tracking-wide text-cv-muted">{site.slogan}</p>
             <p className="max-w-sm text-sm leading-relaxed text-cv-muted">
               {site.tagline}. Backend systems, web platforms, mobile apps, and
               automation — engineered in {site.location}.

@@ -33,6 +33,25 @@ export default function AboutPage() {
       <section className="container-cv pb-20 md:pb-32">
         <div className="relative overflow-hidden rounded-3xl border border-cv-line bg-cv-panel p-6 sm:p-10 lg:p-14">
           <AuroraField dim />
+
+          {/* The workspace — HD photo with a literal mirror reflection */}
+          <div className="relative z-10 mb-10">
+            <div className="mirror-sheen glass overflow-hidden rounded-3xl p-2">
+              <img
+                src="/images/team-office.jpg"
+                alt="The CloudVerge engineering team at work in the Lahore office"
+                className="h-64 w-full rounded-2xl object-cover sm:h-80 lg:h-[420px]"
+              />
+            </div>
+            <div aria-hidden className="reflect-floor -mt-1 hidden h-24 overflow-hidden rounded-b-3xl sm:block">
+              <img
+                src="/images/team-office.jpg"
+                alt=""
+                className="h-24 w-full rounded-2xl object-cover object-bottom"
+              />
+            </div>
+          </div>
+
           <div className="relative z-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
             <div className="glass mirror-sheen rounded-3xl p-6 sm:p-8">
               <h2 className="text-h3 text-cv-ink">Where we came from</h2>

@@ -9,9 +9,10 @@ export const site = {
   tagline: 'Software that holds under pressure',
   description:
     'CloudVerge is a software engineering agency in Lahore building high-throughput backends, scalable web platforms, mobile apps, and automation systems for companies that cannot afford downtime.',
-  email: 'hello@cloudverge.dev',
+  email: 'contact@cloudvergeorg.net',
   phone: '+92 300 0000000',
   location: 'Lahore, Pakistan',
+  slogan: 'Elevating technology. Empowering futures.',
 }
 
 export const navLinks = [
@@ -197,44 +198,44 @@ export const reviews: Review[] = [
   {
     name: 'Ahmed Raza',
     role: 'CTO',
-    company: 'TechStart Pvt Ltd',
+    company: 'TechStart',
     rating: 5,
-    text: 'CloudVerge rebuilt our API layer and response times dropped from 800ms to under 90ms. They think about load before it becomes a problem — that is rare.',
-  },
-  {
-    name: 'Sarah Mitchell',
-    role: 'Head of Engineering',
-    company: 'DataFlow Inc',
-    rating: 5,
-    text: 'The most disciplined agency we have worked with. Weekly demos, honest estimates, and a staging link from week one. Zero surprises at launch.',
-  },
-  {
-    name: 'Omar Farooq',
-    role: 'Founder',
-    company: 'FinServe Analytics',
-    rating: 5,
-    text: 'They treated our data like it was their own money. Security review, encrypted everything, audit logs — before we even asked.',
+    text: 'They rebuilt our order API on Django. p95 went from ~800ms to under 120ms and the weekly crash reports basically stopped. Communication was on WhatsApp and quick.',
   },
   {
     name: 'Ayesha Tariq',
     role: 'Product Manager',
     company: 'EduTech Pakistan',
     rating: 5,
-    text: 'Our LMS handles exam-day traffic spikes without breaking a sweat now. Students noticed the difference in the first week.',
+    text: 'Result-day traffic used to take our LMS down every semester. First exam season after the rework, zero downtime. They also left us proper deployment docs, which nobody does.',
+  },
+  {
+    name: 'Omar Farooq',
+    role: 'Founder',
+    company: 'FinServe Analytics',
+    rating: 4,
+    text: 'Solid engineering and honest estimates. Mid-project responses slowed for about a week during a team crunch, but the final dashboard shipped complete and has run clean for months.',
   },
   {
     name: 'Hassan Ali',
-    role: 'CEO',
+    role: 'Operations Head',
     company: 'RetailMax',
     rating: 4,
-    text: 'Twelve thousand orders a day through their backend and it has not gone down once. The automation work alone paid for the project.',
+    text: 'COD order reconciliation that took our team 3 hours a day is now a 10-minute review. A few edge cases needed a second pass after launch — they fixed them without drama.',
+  },
+  {
+    name: 'Sarah Mitchell',
+    role: 'Head of Engineering',
+    company: 'DataFlow',
+    rating: 5,
+    text: 'We hired them remotely for a scraping and pipeline project. Idempotent jobs, alerting on silent failures, clean handover. The code reads like an in-house senior wrote it.',
   },
   {
     name: 'Zainab Khan',
     role: 'Technical Lead',
-    company: 'AutoWork Solutions',
-    rating: 5,
-    text: 'The field app works perfectly even with no signal, then syncs cleanly. Our technicians actually thanked us for software — a first.',
+    company: 'AutoWork',
+    rating: 4,
+    text: 'The field app works offline and syncs without duplicating job cards, which two previous vendors failed at. UI polish took an extra iteration, but the core has been reliable.',
   },
 ]
 
@@ -256,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Scaling Django for High-Concurrency Applications',
     excerpt: 'The exact techniques we use to take Django from hundreds to tens of thousands of requests per second — connection pooling, query discipline, and caching that actually works.',
     category: 'Backend',
-    author: 'Muhammad Kashif Latif',
+    author: 'Abdul Muqeet',
     date: 'Aug 2026',
     readTime: '8 min read',
     tint: 'violet',
@@ -272,7 +273,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Docker to Kubernetes: Our Production Deployment Journey',
     excerpt: 'When a docker-compose setup stops being enough, and what actually changes when you make the jump — from someone who runs both in production.',
     category: 'DevOps',
-    author: 'Jahanzaib Anwar Butt',
+    author: 'Muhammad Kashif Latif',
     date: 'Jul 2026',
     readTime: '10 min read',
     tint: 'sky',
@@ -288,7 +289,7 @@ export const blogPosts: BlogPost[] = [
     title: 'React Native vs Flutter in 2026: Our Engineering Perspective',
     excerpt: 'We ship both. Here is how we actually choose between them for client projects — and why the answer is usually about the team, not the framework.',
     category: 'Mobile',
-    author: 'Abdul Muqeet',
+    author: 'Mashad Ali',
     date: 'Jun 2026',
     readTime: '7 min read',
     tint: 'mint',
@@ -304,7 +305,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Building Intelligent Automation with Python: A Practical Guide',
     excerpt: 'From cron jobs to resilient pipelines — patterns for automation that survives real-world messiness instead of breaking at 3am.',
     category: 'Automation',
-    author: 'Mashad Ali',
+    author: 'Jahanzaib Anwar Butt',
     date: 'May 2026',
     readTime: '6 min read',
     tint: 'peach',
@@ -333,12 +334,12 @@ export const timeline = [
 ] as const
 
 export const team = [
-  { name: 'Muhammad Kashif Latif', title: 'CEO & Operational Lead', dept: 'Leadership' },
+  { name: 'Abdul Muqeet', title: 'CEO & Operational Lead', dept: 'Leadership' },
   { name: 'Muhammad Kashif Abdullah', title: 'Chairman & Investor', dept: 'Leadership' },
-  { name: 'Jahanzaib Anwar Butt', title: 'Web Engineering Lead', dept: 'Engineering' },
-  { name: 'Abdul Muqeet', title: 'Mobile Engineering Lead', dept: 'Engineering' },
-  { name: 'Mashad Ali', title: 'Software Engineer', dept: 'Engineering' },
   { name: 'Muhammad Abdul Moeed', title: 'Chief Financial Officer', dept: 'Finance' },
+  { name: 'Muhammad Kashif Latif', title: 'Web Engineering Lead', dept: 'Engineering' },
+  { name: 'Mashad Ali', title: 'Mobile Engineering Lead', dept: 'Engineering' },
+  { name: 'Jahanzaib Anwar Butt', title: 'Software Engineer', dept: 'Engineering' },
 ] as const
 
 export const techStack = {
@@ -351,24 +352,24 @@ export const techStack = {
 export const pricingTiers = [
   {
     name: 'Starter',
-    monthly: 499,
-    yearly: 449,
+    monthly: 199,
+    yearly: 179,
     tagline: 'For a focused product or MVP',
     features: ['Up to 5 API endpoints', '1 deployment environment', 'CI/CD pipeline', 'Email support', 'Monthly progress report'],
     highlighted: false,
   },
   {
     name: 'Professional',
-    monthly: 1499,
-    yearly: 1349,
+    monthly: 599,
+    yearly: 539,
     tagline: 'For growing products with real users',
     features: ['Up to 20 API endpoints', '3 environments incl. staging', 'CI/CD pipeline', 'Priority Slack support', 'Performance monitoring', 'Monthly security scan'],
     highlighted: true,
   },
   {
     name: 'Enterprise',
-    monthly: 3999,
-    yearly: 3599,
+    monthly: 1499,
+    yearly: 1349,
     tagline: 'For platforms that cannot go down',
     features: ['Unlimited API endpoints', 'Unlimited environments', 'Dedicated engineering pod', '24/7 incident response', '99.9% uptime SLA', 'Quarterly security audit'],
     highlighted: false,

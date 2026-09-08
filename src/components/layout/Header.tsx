@@ -34,10 +34,13 @@ export default function Header() {
             className="flex items-center gap-2.5 text-cv-ink"
             aria-label="CloudVerge — home"
           >
-            <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-cv-ink">
-              <span className="absolute -left-1 -top-1 h-5 w-5 rounded-full bg-gradient-to-br from-indigo-400 to-purple-400 blur-[6px]" />
-              <span className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-br from-sky-400 to-emerald-300 blur-[6px]" />
-            </span>
+            <img
+              src="/brand/logo-mark.png"
+              alt=""
+              className="h-9 w-9 rounded-full shadow-sm"
+              width={36}
+              height={36}
+            />
             <span className="text-[19px] font-semibold tracking-tight">{site.name}</span>
           </button>
 

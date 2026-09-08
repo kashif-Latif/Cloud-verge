@@ -26,5 +26,6 @@ contact-form storage, switch `provider` in `prisma/schema.prisma` to
 `postgresql` and point `DATABASE_URL` at Supabase/Neon. Models already fit.
 
 ## Admin & Portals
-`/admin` and `/portal` still work and inherit the new theme tokens.
-Full portal build-out (admin, web-dev, app-dev, bidder) = next phase.
+Admin/portal components are kept in `src/components/` but are NOT routed on
+the public site anymore. The full portal build-out (admin, web-dev, app-dev,
+bidder + real authentication) is the next phase.

@@ -17,8 +17,6 @@ const BlogPostPage = dynamic(() => import('@/components/blog/BlogPage').then(m =
 const ContactPage = dynamic(() => import('@/components/contact/ContactPage'), { ssr: false })
 const PricingPage = dynamic(() => import('@/components/pricing/PricingPage'), { ssr: false })
 const CareersPage = dynamic(() => import('@/components/careers/CareersPage'), { ssr: false })
-const AdminPage = dynamic(() => import('@/components/admin/AdminPage'), { ssr: false })
-const PortalPage = dynamic(() => import('@/components/portal/PortalPage'), { ssr: false })
 
 const pageVariants = {
   initial: { opacity: 0, y: 14 },
@@ -32,9 +30,6 @@ function PageContent() {
   // Sync store <-> URL once on mount (deep links, back/forward buttons)
   useLayoutEffect(() => initUrlSync(), [])
 
-  const isAdmin = page.startsWith('admin')
-  const isPortal = page.startsWith('portal')
-  const showLayout = !isAdmin && !isPortal
 
   const renderPage = () => {
     switch (page) {
@@ -48,16 +43,6 @@ function PageContent() {
       case 'contact': return <ContactPage />
       case 'pricing': return <PricingPage />
       case 'careers': return <CareersPage />
-      case 'admin':
-      case 'admin-leads':
-      case 'admin-employees':
-      case 'admin-cms':
-      case 'admin-projects':
-        return <AdminPage />
-      case 'portal':
-      case 'portal-tasks':
-      case 'portal-kb':
-        return <PortalPage />
       default:
         return <HomePage />
     }
@@ -65,7 +50,7 @@ function PageContent() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {showLayout && <Header />}
+      <Header />
       <main className="flex-1">
         <AnimatePresence mode="wait">
           <motion.div
@@ -79,7 +64,7 @@ function PageContent() {
           </motion.div>
         </AnimatePresence>
       </main>
-      {showLayout && <Footer />}
+      <Footer />
     </div>
   )
 }

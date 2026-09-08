@@ -44,18 +44,7 @@ export const pathToPage = (pathname: string): { page: Page; params: Record<strin
 
   const [root, second] = parts
   if (root === 'blog' && second) return { page: 'blog-post', params: { slug: second } }
-  if (root === 'admin') {
-    if (second === 'leads') return { page: 'admin-leads', params: {} }
-    if (second === 'employees') return { page: 'admin-employees', params: {} }
-    if (second === 'cms') return { page: 'admin-cms', params: {} }
-    if (second === 'projects') return { page: 'admin-projects', params: {} }
-    return { page: 'admin', params: {} }
-  }
-  if (root === 'portal') {
-    if (second === 'tasks') return { page: 'portal-tasks', params: {} }
-    if (second === 'kb') return { page: 'portal-kb', params: {} }
-    return { page: 'portal', params: {} }
-  }
+  // admin/portal intentionally not routed on the public site (portal phase comes later)
 
   const known: Page[] = ['about', 'services', 'projects', 'careers', 'reviews', 'blog', 'contact', 'pricing']
   if (known.includes(root as Page)) return { page: root as Page, params: {} }

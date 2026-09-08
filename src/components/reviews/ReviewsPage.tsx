@@ -54,7 +54,7 @@ export default function ReviewsPage() {
               <span className="text-4xl font-semibold tracking-tight text-cv-ink">{avg}</span>
               <div>
                 <Stars count={5} />
-                <p className="mt-1 text-xs text-cv-muted">{reviews.length} verified client reviews</p>
+                <p className="mt-1 text-xs text-cv-muted">{reviews.length} client reviews</p>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function ReviewsPage() {
             <SectionHead
               chip="Worked with us?"
               title="Leave a review"
-              lead="Reviews are verified against real projects before they appear here."
+              lead="Tell us what we built together and how it went — reviews are checked before they appear."
               align="center"
             />
             <form onSubmit={submit} className="glass-strong mirror-sheen flex flex-col gap-4 rounded-3xl p-6 sm:p-8">
